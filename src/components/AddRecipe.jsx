@@ -3,7 +3,7 @@ import './addRecipe.css'
 
 function AddRecipe() {
     return(
-        <div><AddRecipe /></div>
+        <div>Add recipe</div>
     )
 }
 
