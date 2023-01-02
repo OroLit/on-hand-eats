@@ -1,8 +1,9 @@
 import React from "react";
+import Button from "../UI/button";
 
 function MyRecipe() {
     return(
-        <div>My Recipe</div>
+       <Button>MyRecipe</Button>
     )
 }
 

@@ -7,7 +7,7 @@ function App() {
   
 
   async function getRecipes () {
-    let result = await fetch('https://api.edamam.com/api/recipes/v2/recipe-finder?type=public&app_id=YOUR_APP_ID&app_key=YOUR_APP_KEY';
+    let result = await fetch('https://api.edamam.com/api/recipes/v2/recipe-finder?type=public&app_id=YOUR_APP_ID&app_key=YOUR_APP_KEY'
      );
     console.log(result.data)
   }
@@ -17,7 +17,6 @@ function App() {
       <section id="menu-bar">
         <header id="logo">On Hand Eats</header>
           <Home  />
-          <p>Hello world</p>
         </section> 
       </div>
   )

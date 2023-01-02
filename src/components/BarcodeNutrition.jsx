@@ -1,8 +1,9 @@
 import React from "react";
+import Button from "../UI/button";
 
 function BarcodeNutrition() {
     return(
-        <div>Barcode Nutrition</div>
+        <Button>Barcode Nutrition</Button>
     )
 }
 
