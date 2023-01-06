@@ -10,7 +10,7 @@ function App() {
  // const YOUR_APP_KEY = '7bdff98b8099c04bc7aa83cccbc70f04'
   const addRecipeHandler = (recipeName, recipeDescription) => {
     setRecipeList((prevRecipeList) => {
-      return [...prevRecipeList, { name: recipeName, Desription: recipeDescription, id: Math.random().toString() }];
+      return [...prevRecipeList, { name: recipeName, description: recipeDescription, id: Math.random().toString() }];
     });
   }
   

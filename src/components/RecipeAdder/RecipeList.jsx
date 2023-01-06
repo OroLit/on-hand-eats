@@ -8,7 +8,7 @@ function RecipeList(props) {
         <ul>
           {props.recipe.map((recipe) => (
             <li key={recipe.id}>
-              {recipe.name} ({recipe.desricption})
+              {recipe.name} ({recipe.description})
             </li>
           ))}
       </ul>
