@@ -14,16 +14,16 @@ function Home() {
             <nav className="navigation">
                 <ul>
                     <li>
-                        <CustomLink to='./SearchForm'>Search</CustomLink>
+                        <Link to='./SearchForm'>Search</Link>
                     </li>
                     <li>
-                        <CustomLink to='/RecipeForm'>AddRecipe</CustomLink>
+                        <Link to='/RecipeForm'>AddRecipe</Link>
                     </li>
                     <li>
-                        <CustomLink to='/myRecipe'>MyRecipe</CustomLink>
+                        <Link to='/myRecipe'>MyRecipe</Link>
                     </li>
                     <li>
-                        <CustomLink to='/barcodeNutrition'>BarcodeNutrition </CustomLink>
+                        <Link to='/barcodeNutrition'>BarcodeNutrition </Link>
                     </li>
                 </ul>
             </nav>
@@ -31,7 +31,7 @@ function Home() {
     )
 };
 
-function CustomLink({ to, children, ...props }) {
+/*function CustomLink({ to, children, ...props }) {
     const path = window.location.pathname
 
     return (
@@ -41,6 +41,6 @@ function CustomLink({ to, children, ...props }) {
             </Link>
         </li>
     )
-}
+}*/
 
 export default Home; 

@@ -30,7 +30,8 @@ function RecipeForm(props) {
     function handleChange(e) {
         console.log(e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
-    }*/
+    }<img src={file} />
+    */
     const errorHandler = () => {
         setError(null);
     }
@@ -102,8 +103,8 @@ function RecipeForm(props) {
                         onChange={nutritionChangeHandler}
                     />
                     <h4>Photos</h4>
-                    <input type="file" onChange={handleChange} />
-                    <img src={file} />
+                    <input type="file" />
+                    
                 </form>
             </Card>
         </Wrapper>
