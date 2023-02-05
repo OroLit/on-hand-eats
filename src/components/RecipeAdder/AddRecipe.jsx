@@ -1,10 +1,37 @@
 import React from "react";
 import './addRecipe.css'
 import Button from "../../UI/button";
+import RecipeForm from "./RecipeForm";
 
-function AddRecipe() {
+function AddRecipe(props) {
+    const [isEditing, setIsEditing] = useState(false);
+
+    const saveRecipeDataHandler = (enteredRecipeData) => {
+        const recipeData = {
+            ...enteredRecipeData,
+            id: Math.random().toString()
+        };
+      props.onAddRecipe(recipeData);
+      setIsEditing(false);
+    };
+    const startEditingHandler = () => {
+        setIsEditing(true);
+    };
+
+    const stopEditingHandler = () => {
+        setIsEditing(false);
+    };
+
     return(
-        <Button>Add recipe</Button>
+        <div>
+        {!isEditing &&
+        <Button onClick={startEditingHandler}>Add recipe</Button>}
+       
+        {!isEditing && 
+        <RecipeForm 
+        onSaveRecipeData={saveRecipeDataHandler}
+        onCancel={stopEditingHandler} />}
+        </div>
     )
 }
 

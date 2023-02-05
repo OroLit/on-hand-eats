@@ -1,7 +1,8 @@
 .recipe {
-    margin: 2rem auto;
+    margin: 4rem, 0rem;
     width: 90%;
     max-width: 40rem;
+    overflow: hidden;
   }
   
   .recipe ul {
