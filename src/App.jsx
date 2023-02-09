@@ -1,10 +1,13 @@
-import Home from './pages/Home';
+import Nav from './pages/Nav'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Search from './components/Search';
 import AddRecipe from './components/RecipeAdder/AddRecipe';
 import MyRecipe from './components/MyRecipe';
 import BarcodeNutrition from './components/BarcodeNutrition';
+import ErrorBoundary from './components/ErrorBoundry';
+import Home from './components/Home';
+
 //import React, { useState } from 'react';
 
 
@@ -28,13 +31,14 @@ function App() {
     <div className="app">
       <section id="menu-bar">
         <header id="logo">On Hand Eats</header>
-        <Home />
+        <ErrorBoundary><Nav /></ErrorBoundary>
         <div className='container'>
           <Routes>
-            <Route path='/Search' element={<Search />} />
-            <Route path='/RecipeForm' element={<AddRecipe />} />
-            <Route path='/MyRecipe' element={<MyRecipe />} />
-            <Route path='/BarcodeNutrition' element={<BarcodeNutrition />} />
+          <Route path='/' element={<Home />} />
+            <Route path='/searchform' element={<Search />} />
+            <Route path='/addrecipe' element={<AddRecipe />} />
+            <Route path='/myrecipe' element={<MyRecipe />} />
+            <Route path='/Barcodenutrition' element={<BarcodeNutrition />} />
           </Routes>
         </div>
       </section>

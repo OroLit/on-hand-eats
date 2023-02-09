@@ -31,6 +31,9 @@ function Search() {
    
     return (
         <div>
+            <input 
+            placeholder="Ingredients" 
+            type='text' />
             <Button>Search</Button>
         </div>
     )
