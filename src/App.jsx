@@ -5,7 +5,6 @@ import Search from './components/Search';
 import AddRecipe from './components/RecipeAdder/AddRecipe';
 import MyRecipe from './components/MyRecipe';
 import BarcodeNutrition from './components/BarcodeNutrition';
-import ErrorBoundary from './components/ErrorBoundry';
 import Home from './components/Home';
 
 //import React, { useState } from 'react';
@@ -31,7 +30,7 @@ function App() {
     <div className="app">
       <section id="menu-bar">
         <header id="logo">On Hand Eats</header>
-        <ErrorBoundary><Nav /></ErrorBoundary>
+        <Nav />
         <div className='container'>
           <Routes>
           <Route path='/' element={<Home />} />

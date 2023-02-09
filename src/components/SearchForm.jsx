@@ -23,7 +23,7 @@ function SearchForm() {
     }
     //Need to add the fetch method for the SerchBar input
     useEffect(() => {
-        fetchTasks();
+        getRecipe();
     }, [])
 
 

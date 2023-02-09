@@ -9,7 +9,6 @@ import ErrorModal from "../../UI/ErrorModal";
 
 
 function AddRecipe(props) {
-    //const [isEditing, setIsEditing] = useState(false);
     const [error, setError] = useState();
     const [enteredRecipeName, setEnteredRecipeName] = useState('');
     const [enteredDescription, setEnteredDescription] = useState('');
@@ -20,8 +19,8 @@ function AddRecipe(props) {
     const recipeChangeHandler = (event) => {
         setEnteredRecipeName(event.target.value)
     }
-    const descriptionChangeHandler = (event) => {
-        setEnteredDescription(event.target.value)
+    function descriptionChangeHandler(event) {
+        setEnteredDescription(event.target.value);
     }
     const noteChangeHandler = (event) => {
         setEnteredNote(event.target.value)
@@ -37,8 +36,6 @@ function AddRecipe(props) {
     } <img src={file} />
     
     */
-
-    
 
     const submitHandler = (event) => {
         event.preventDefault();
