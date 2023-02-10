@@ -1,6 +1,7 @@
 import React from "react";
 import './Nav.css';
 import { Link } from "react-router-dom";
+import Button from "../UI/button";
 
 
 function Home() {
@@ -13,20 +14,20 @@ function Home() {
         <div className="menu">
             <nav className="navigation">
                 <ul>
-                <li>
-                        <Link to='/'>Home</Link>
+                    <li>
+                        <Link to='/'><Button>Home</Button></Link>
                     </li>
                     <li>
-                        <Link to='./searchform'>Search</Link>
+                        <Link to='./searchform'><Button>Search</Button></Link>
                     </li>
                     <li>
-                        <Link to='/addrecipe'>AddRecipe</Link>
+                        <Link to='/addrecipe'><Button>AddRecipe</Button></Link>
                     </li>
                     <li>
-                        <Link to='/myRecipe'>MyRecipe</Link>
+                        <Link to='/myRecipe'><Button>MyRecipe</Button></Link>
                     </li>
                     <li>
-                        <Link to='/barcodeNutrition'>BarcodeNutrition </Link>
+                        <Link to='/barcodeNutrition'><Button>BarcodeNutrition</Button></Link>
                     </li>
                 </ul>
             </nav>

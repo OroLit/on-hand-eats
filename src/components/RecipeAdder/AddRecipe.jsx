@@ -3,7 +3,7 @@ import classes from './addRecipe.module.css'
 import Button from "../../UI/Button"
 import Wrapper from "../Helpers/Wrapper";
 import Card from "../../UI/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiSave3Line } from "react-icons/ri";
 import ErrorModal from "../../UI/ErrorModal";
 
@@ -30,12 +30,11 @@ function AddRecipe(props) {
     }
     //file, setFile arguement?
 
-    /*function handleChange(e) {
+    function handleChange(e) {
         console.log(e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
-    } <img src={file} />
+    } 
     
-    */
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -52,12 +51,21 @@ function AddRecipe(props) {
         setEnteredNote('')
         setEnteredNutrition('')
     }
-    if (enteredRecipeName.length === 0 || enteredDescription.length === 0 || enteredNote.length === 0 || enteredNutrition.length === 0) {
-        setError({
-            title: 'Invalid input',
-            message: 'Please enter a valid name and description (non-empty values)'
-        })
-    }
+    useEffect(() => {
+        if (
+          enteredRecipeName.length === 0 ||
+          enteredDescription.length === 0 ||
+          enteredNote.length === 0 ||
+          enteredNutrition.length === 0
+        ) {
+          setError({
+            title: "Invalid input",
+            message:
+              "Please enter a valid name and description (non-empty values)",
+          });
+        }
+}, [enteredRecipeName, enteredDescription, enteredNote, enteredNutrition])
+    
     const errorHandler = () => {
         setError(null);
     }
